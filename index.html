@@ -1,60 +1,113 @@
 <!DOCTYPE html>
 
 <html>
+	<head>
+		<meta charset="utf-8" />
 
-    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta charset="utf-8" />
+		<title>#TimeMatters</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+		/>
+	</head>
 
-        <title>#TimeMatters</title>
+	<body>
+		<section class="hero is-danger is-fullheight">
+			<div class="hero-body">
+				<div class="">
+					<p class="title">#സമയം അറിയണം</p>
 
-        <link
+					<p class="subtitle">
+						പി എസ് സി പരീക്ഷ ഹാളിൽ എല്ലാവർക്കും ഒരുപോലെ സമയം
+						അറിയുവാനുള്ള അവകാശം നേടിയെടുക്കാൻ പി എസ് സി ചെയർമാൻ
+						അയക്കുന്ന പരാതി. Send a mail ബട്ടണമർത്തി നിങ്ങളും ഒരു
+						പരാതി അയക്കു
+						<br />
+						<a id="open-modal" href="">See message content</a>
+					</p>
 
-            rel="stylesheet"
+					<a
+						class="button is-large"
+						href="mailto:kpsc.psc@kerala.gov.in,sect.psc@kerala.gov.in?subject=%E0%B4%AA%E0%B4%BF%20%E0%B4%8E%E0%B4%B8%E0%B5%8D%20%E0%B4%B8%E0%B4%BF%20%E0%B4%AA%E0%B4%B0%E0%B5%80%E0%B4%95%E0%B5%8D%E0%B4%B7%20%E0%B4%B9%E0%B4%BE%E0%B4%B3%E0%B4%BF%E0%B5%BD%20%E0%B4%8E%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B4%BE%E0%B4%B5%E0%B5%BC%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%82%20%E0%B4%92%E0%B4%B0%E0%B5%81%E0%B4%AA%E0%B5%8B%E0%B4%B2%E0%B5%86%20%E0%B4%B8%E0%B4%AE%E0%B4%AF%E0%B4%82%20%09%E0%B4%85%E0%B4%B1%E0%B4%BF%E0%B4%AF%E0%B5%81%E0%B4%B5%E0%B4%BE%E0%B4%A8%E0%B5%81%E0%B4%B3%E0%B5%8D%E0%B4%B3%20%E0%B4%85%E0%B4%B5%E0%B4%95%E0%B4%BE%E0%B4%B6%E0%B4%82%20%E0%B4%A8%E0%B5%87%E0%B4%9F%E0%B4%BF%E0%B4%AF%E0%B5%86%E0%B4%9F%E0%B5%81%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B5%BB%20%E0%B4%AA%E0%B4%BF%20%E0%B4%8E%E0%B4%B8%E0%B5%8D%20%E0%B4%B8%E0%B4%BF%20%E0%B4%9A%E0%B5%86%E0%B4%AF%E0%B5%BC%E0%B4%AE%E0%B4%BE%E0%B5%BB%20%09%E0%B4%85%E0%B4%AF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%20%E0%B4%AA%E0%B4%B0%E0%B4%BE%E0%B4%A4%E0%B4%BF&body=%E0%B4%AC%E0%B4%B9%E0%B5%81%E0%B4%AE%E0%B4%BE%E0%B4%A8%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%86%E0%B4%9F%E0%B5%8D%E0%B4%9F%20%E0%B4%AA%E0%B4%BF%20%E0%B4%8E%E0%B4%B8%E0%B5%8D%20%E0%B4%B8%E0%B4%BF%20%E0%B4%9A%E0%B5%86%E0%B4%AF%E0%B5%BC%E0%B4%AE%E0%B4%BE%E0%B5%BB%20%E0%B4%85%E0%B4%B1%E0%B4%BF%E0%B4%AF%E0%B4%BE%E0%B5%BB%20%E0%B4%9E%E0%B4%BE%E0%B5%BB%20%E0%B4%AA%E0%B4%BF%E0%B4%8E%E0%B4%B8%E0%B5%8D%E2%80%8C%E0%B4%B8%E0%B4%BF%20%E0%B4%AA%E0%B4%B0%E0%B5%80%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%AF%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%8D%20%E0%B4%B5%E0%B5%87%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BF%20%E0%B4%A4%E0%B4%AF%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%B1%E0%B5%86%E0%B4%9F%E0%B5%81%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%20%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%89%E0%B4%A6%E0%B5%8D%E0%B4%AF%E0%B5%8B%E0%B4%97%E0%B4%BE%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A5%E0%B4%BF%20%E0%B4%86%E0%B4%A3%E0%B5%8D%20.%E0%B4%AA%E0%B4%BF%20%E0%B4%8E%E0%B4%B8%E0%B5%8D%20%E0%B4%B8%E0%B4%BF%20%E0%B4%AF%E0%B5%81%E0%B4%9F%E0%B5%86%20%E0%B4%AA%E0%B5%81%E0%B4%A4%E0%B4%BF%E0%B4%AF%20%E0%B4%AA%E0%B4%B0%E0%B4%BF%E0%B4%B7%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%B0%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B5%81%E0%B4%9F%E0%B5%86%20%E0%B4%AD%E0%B4%BE%E0%B4%97%E0%B4%AE%E0%B4%BE%E0%B4%AF%E0%B4%BF%20%E0%B4%8E%E0%B4%95%E0%B5%8D%E0%B4%B8%E0%B4%BE%E0%B4%82%20%E0%B4%B9%E0%B4%BE%E0%B4%B3%E0%B4%BF%E0%B5%BD%20%E0%B4%B5%E0%B4%BE%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BF%E0%B4%A8%E0%B5%8D%20%E0%B4%8F%E0%B5%BC%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%86%E0%B4%9F%E0%B5%81%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%BF%E0%B4%AF%20%E0%B4%A8%E0%B4%BF%E0%B4%B0%E0%B5%8B%E0%B4%A7%E0%B4%A8%E0%B4%82%20%E0%B4%AA%E0%B4%B0%E0%B5%80%E0%B4%95%E0%B5%8D%E0%B4%B7%20%E0%B4%8E%E0%B4%B4%E0%B5%81%E0%B4%A4%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B4%BF%E0%B5%BD%20%E0%B4%B5%E0%B4%B2%E0%B4%BF%E0%B4%AF%20%E0%B4%AC%E0%B5%81%E0%B4%A6%E0%B5%8D%E0%B4%A7%E0%B4%BF%E0%B4%AE%E0%B5%81%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B4%A3%E0%B5%8D%20%E0%B4%A8%E0%B5%87%E0%B4%B0%E0%B4%BF%E0%B4%9F%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%8D.%20%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%82%E0%B4%B3%E0%B4%BF%E0%B5%BD%20%E0%B4%AC%E0%B5%86%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B4%9F%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%B1%E0%B5%81%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%95%E0%B4%BF%E0%B4%B2%E0%B5%81%E0%B4%82%20%E0%B4%B5%E0%B4%BE%E0%B4%B9%E0%B4%A8%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B5%81%E0%B4%9F%E0%B5%86%20%E0%B4%B6%E0%B4%AC%E0%B5%8D%E0%B4%A6%E0%B4%82%2C%20%E0%B4%AE%E0%B4%B4%E0%B4%AF%E0%B5%81%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%20%E0%B4%B8%E0%B4%AE%E0%B4%AF%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B4%BF%E0%B4%B2%E0%B5%81%E0%B4%82%20%E0%B4%AC%E0%B5%86%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B4%9F%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%8D%20%E0%B4%95%E0%B5%87%E0%B5%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B5%BB%20%E0%B4%B8%E0%B4%BE%E0%B4%A7%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%8D%E0%B4%B2.%E0%B4%B8%E0%B4%AE%E0%B4%AF%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%AE%E0%B4%82%20%E0%B4%AA%E0%B4%BE%E0%B4%B2%E0%B4%BF%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B5%8D%20%E0%B4%8E%E0%B4%95%E0%B5%8D%E0%B4%B8%E0%B4%BE%E0%B4%82%20%E0%B4%8E%E0%B4%B4%E0%B5%81%E0%B4%A4%E0%B4%BE%E0%B5%BB%20%E0%B4%87%E0%B4%A4%E0%B4%BF%E0%B4%A8%E0%B4%BE%E0%B5%BD%20%E0%B4%B8%E0%B4%BE%E0%B4%A7%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%BF%E0%B4%B2%E0%B5%8D%E0%B4%B2.%20%E0%B4%9A%E0%B4%BF%E0%B4%B2%20%E0%B4%95%E0%B5%8D%E0%B4%B2%E0%B4%BE%E0%B4%B8%E0%B5%81%E0%B4%95%E0%B4%B3%E0%B4%BF%E0%B5%BD%20%E0%B4%95%E0%B5%8D%E0%B4%B2%E0%B5%8B%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%8D%20%E0%B4%89%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%A4%E0%B5%8D%20%20%E0%B4%89%E0%B4%A6%E0%B5%8D%E0%B4%AF%E0%B5%8B%E0%B4%97%E0%B4%BE%E0%B5%BC%E0%B4%A5%E0%B4%BF%E0%B4%95%E0%B4%B3%E0%B5%8B%E0%B4%9F%E0%B5%8D%20%E0%B4%95%E0%B4%BE%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%20%E0%B4%B5%E0%B5%87%E0%B5%BC%E0%B4%A4%E0%B4%BF%E0%B4%B0%E0%B4%BF%E0%B4%B5%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B5%87%20%3F.%20%E0%B4%86%E0%B4%AF%E0%B4%A4%E0%B4%BF%E0%B4%A8%E0%B4%BE%E0%B5%BD%20%E0%B4%AA%E0%B4%B0%E0%B5%80%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%BE%20%E0%B4%B9%E0%B4%BE%E0%B4%B3%E0%B4%BF%E0%B5%BD%20%E0%B4%89%E0%B4%A6%E0%B5%8D%E0%B4%AF%E0%B5%8B%E0%B4%97%E0%B4%BE%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A5%E0%B4%BF%E0%B4%95%E0%B4%B3%E0%B5%81%E0%B4%9F%E0%B5%86%20%E0%B4%86%E0%B4%B5%E0%B4%B6%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%A8%E0%B5%81%E0%B4%B8%E0%B4%B0%E0%B4%A3%E0%B4%82%20%E0%B4%B8%E0%B4%AE%E0%B4%AF%E0%B4%82%20%E0%B4%A8%E0%B5%8B%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%B5%E0%B4%BE%E0%B4%A8%E0%B5%81%E0%B4%B3%E0%B5%8D%E0%B4%B3%20%E0%B4%B8%E0%B4%82%E0%B4%B5%E0%B4%BF%E0%B4%A7%E0%B4%BE%E0%B4%A8%E0%B4%82%20%E0%B4%92%E0%B4%B0%E0%B5%81%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%A3%E0%B4%AE%E0%B5%86%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B5%8D%20%E0%B4%B5%E0%B4%BF%E0%B4%A8%E0%B5%80%E0%B4%A4%E0%B4%AE%E0%B4%BE%E0%B4%AF%E0%B4%BF%20%E0%B4%85%E0%B4%AA%E0%B5%87%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B5%81."
+						class="text-white hover:text-gray-400"
+					>
+						<svg
+							width="25"
+							height="20"
+							fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M2.5 0h20A2.5 2.5 0 0 1 25 2.5v15a2.5 2.5 0 0 1-2.5 2.5h-20A2.5 2.5 0 0 1 0 17.5v-15C0 1.125 1.125 0 2.5 0zm20 4.225V2.5h-20v1.725l10 5 10-5zm0 2.8l-9.438 4.713a1.25 1.25 0 0 1-1.124 0L2.5 7.025V17.5h20V7.025z"
+								fill-rule="nonzero"
+							/>
+						</svg>
+						Send a mail
+					</a>
+				</div>
+			</div>
+		</section>
+		<div class="modal">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">Email content</p>
+					<button class="delete" aria-label="close"></button>
+				</header>
+				<section class="modal-card-body">
+					<!-- Content ... -->
+					<p class="title is-5">To :</p>
+					<p>kpsc.psc@kerala.gov.in,sect.psc@kerala.gov.in</p>
+					<p class="title is-5">Subject :</p>
+					<p>
+						പി എസ് സി പരീക്ഷ ഹാളിൽ എല്ലാവർക്കും ഒരുപോലെ സമയം
+						അറിയുവാനുള്ള അവകാശം നേടിയെടുക്കാൻ പി എസ് സി ചെയർമാൻ
+						അയക്കുന്ന പരാതി
+					</p>
+					<p class="title is-5">Body :</p>
+					<p>
+						Body : ബഹുമാനപ്പെട്ട പി എസ് സി ചെയർമാൻ അറിയാൻ ഞാൻ
+						പിഎസ്‌സി പരീക്ഷയ്ക്ക് വേണ്ടി തയ്യാറെടുക്കുന്ന ഒരു
+						ഉദ്യോഗാർത്ഥി ആണ് .പി എസ് സി യുടെ പുതിയ പരിഷ്കാരങ്ങളുടെ
+						ഭാഗമായി എക്സാം ഹാളിൽ വാച്ചിന് ഏർപ്പെടുത്തിയ നിരോധനം
+						പരീക്ഷ എഴുതുന്നതിൽ വലിയ ബുദ്ധിമുട്ടാണ് നേരിടുന്നത്.
+						സ്ക്കൂളിൽ ബെല്ലടിക്കാറുണ്ടെങ്കിലും വാഹനങ്ങളുടെ ശബ്ദം,
+						മഴയുണ്ടാകുന്ന സമയങ്ങളിലും ബെല്ലടിക്കുന്നത് കേൾക്കാൻ
+						സാധിക്കാറില്ല.സമയക്രമം പാലിച്ച് എക്സാം എഴുതാൻ ഇതിനാൽ
+						സാധിക്കുന്നില്ല. ചില ക്ലാസുകളിൽ ക്ലോക്ക് ഉള്ളത്
+						ഉദ്യോഗാർഥികളോട് കാണിക്കുന്ന വേർതിരിവല്ലേ ?. ആയതിനാൽ
+						പരീക്ഷാ ഹാളിൽ ഉദ്യോഗാർത്ഥികളുടെ ആവശ്യാനുസരണം സമയം
+						നോക്കുവാനുള്ള സംവിധാനം ഒരുക്കണമെന്ന് വിനീതമായി
+						അപേക്ഷിക്കുന്നു.
+					</p>
+				</section>
+				<footer class="modal-card-foot">
+					<!-- <button class="button">Cancel</button> -->
+				</footer>
+			</div>
+		</div>
+	</body>
+	<script>
+		document
+			.querySelector("a#open-modal")
+			.addEventListener("click", function (event) {
+				event.preventDefault();
+				var modal = document.querySelector(".modal"); // assuming you have only 1
+				var html = document.querySelector("html");
+				modal.classList.add("is-active");
+				html.classList.add("is-clipped");
 
-            href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
-
-        />
-
-    </head>
-
-    <body>
-
-        <section class="hero is-danger is-fullheight">
-
-            <div class="hero-body">
-
-                <div class="">
-
-                    <p class="title">#TimeMatters</p>
-
-                    <p class="subtitle">
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-
-                        elit. Repudiandae vel neque esse ex minus consequuntur.
-
-                        Eaque, ad dolore hic enim fuga sapiente porro fugit nemo
-
-                        cum dicta repellendus non molestiae.
-
-                    </p>
-                    <a    class="button is-large"   href= "mailto:kpsc.psc@kerala.gov.in,sect.psc@kerala.gov.in?subject=%E0%B4%AA%E0%B4%B0%E0%B4%BE%E0%B4%A4%E0%B4%BF&body=%E0%B4%AC%E0%B4%B9%E0%B5%81%E0%B4%AE%E0%B4%BE%E0%B4%A8%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%86%E0%B4%9F%E0%B5%8D%E0%B4%9F%20%E0%B4%AA%E0%B4%BF%20%E0%B4%8E%E0%B4%B8%E0%B5%8D%20%E0%B4%B8%E0%B4%BF%20%E0%B4%9A%E0%B5%86%E0%B4%AF%E0%B5%BC%E0%B4%AE%E0%B4%BE%E0%B5%BB%20%E0%B4%85%E0%B4%B1%E0%B4%BF%E0%B4%AF%E0%B4%BE%E0%B5%BB%20%E0%B4%9E%E0%B4%BE%E0%B5%BB%20%E0%B4%AA%E0%B4%BF%E0%B4%8E%E0%B4%B8%E0%B5%8D%E2%80%8C%E0%B4%B8%E0%B4%BF%20%E0%B4%AA%E0%B4%B0%E0%B5%80%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%AF%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%8D%20%E0%B4%B5%E0%B5%87%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BF%20%E0%B4%A4%E0%B4%AF%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%B1%E0%B5%86%E0%B4%9F%E0%B5%81%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%20%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%89%E0%B4%A6%E0%B5%8D%E0%B4%AF%E0%B5%8B%E0%B4%97%E0%B4%BE%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A5%E0%B4%BF%20%E0%B4%86%E0%B4%A3%E0%B5%8D%20.%E0%B4%AA%E0%B4%BF%20%E0%B4%8E%E0%B4%B8%E0%B5%8D%20%E0%B4%B8%E0%B4%BF%20%E0%B4%AF%E0%B5%81%E0%B4%9F%E0%B5%86%20%E0%B4%AA%E0%B5%81%E0%B4%A4%E0%B4%BF%E0%B4%AF%20%E0%B4%AA%E0%B4%B0%E0%B4%BF%E0%B4%B7%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%B0%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B5%81%E0%B4%9F%E0%B5%86%20%E0%B4%AD%E0%B4%BE%E0%B4%97%E0%B4%AE%E0%B4%BE%E0%B4%AF%E0%B4%BF%20%E0%B4%8E%E0%B4%95%E0%B5%8D%E0%B4%B8%E0%B4%BE%E0%B4%82%20%E0%B4%B9%E0%B4%BE%E0%B4%B3%E0%B4%BF%E0%B5%BD%20%E0%B4%B5%E0%B4%BE%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%BF%E0%B4%A8%E0%B5%8D%20%E0%B4%8F%E0%B5%BC%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%86%E0%B4%9F%E0%B5%81%E0%B4%A4%E0%B5%8D%E0%B4%A4%E0%B4%BF%E0%B4%AF%20%E0%B4%A8%E0%B4%BF%E0%B4%B0%E0%B5%8B%E0%B4%A7%E0%B4%A8%E0%B4%82%20%E0%B4%AA%E0%B4%B0%E0%B5%80%E0%B4%95%E0%B5%8D%E0%B4%B7%20%E0%B4%8E%E0%B4%B4%E0%B5%81%E0%B4%A4%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B4%BF%E0%B5%BD%20%E0%B4%B5%E0%B4%B2%E0%B4%BF%E0%B4%AF%20%E0%B4%AC%E0%B5%81%E0%B4%A6%E0%B5%8D%E0%B4%A7%E0%B4%BF%E0%B4%AE%E0%B5%81%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B4%A3%E0%B5%8D%20%E0%B4%A8%E0%B5%87%E0%B4%B0%E0%B4%BF%E0%B4%9F%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%8D.%20%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%82%E0%B4%B3%E0%B4%BF%E0%B5%BD%20%E0%B4%AC%E0%B5%86%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B4%9F%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%B1%E0%B5%81%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%95%E0%B4%BF%E0%B4%B2%E0%B5%81%E0%B4%82%20%E0%B4%B5%E0%B4%BE%E0%B4%B9%E0%B4%A8%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B5%81%E0%B4%9F%E0%B5%86%20%E0%B4%B6%E0%B4%AC%E0%B5%8D%E0%B4%A6%E0%B4%82%2C%20%E0%B4%AE%E0%B4%B4%E0%B4%AF%E0%B5%81%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BE%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%20%E0%B4%B8%E0%B4%AE%E0%B4%AF%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B4%BF%E0%B4%B2%E0%B5%81%E0%B4%82%20%E0%B4%AC%E0%B5%86%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B4%9F%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%8D%20%E0%B4%95%E0%B5%87%E0%B5%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B5%BB%20%E0%B4%B8%E0%B4%BE%E0%B4%A7%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%B1%E0%B4%BF%E0%B4%B2%E0%B5%8D%E0%B4%B2.%E0%B4%B8%E0%B4%AE%E0%B4%AF%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B4%AE%E0%B4%82%20%E0%B4%AA%E0%B4%BE%E0%B4%B2%E0%B4%BF%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B5%8D%20%E0%B4%8E%E0%B4%95%E0%B5%8D%E0%B4%B8%E0%B4%BE%E0%B4%82%20%E0%B4%8E%E0%B4%B4%E0%B5%81%E0%B4%A4%E0%B4%BE%E0%B5%BB%20%E0%B4%87%E0%B4%A4%E0%B4%BF%E0%B4%A8%E0%B4%BE%E0%B5%BD%20%E0%B4%B8%E0%B4%BE%E0%B4%A7%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%BF%E0%B4%B2%E0%B5%8D%E0%B4%B2.%20%E0%B4%9A%E0%B4%BF%E0%B4%B2%20%E0%B4%95%E0%B5%8D%E0%B4%B2%E0%B4%BE%E0%B4%B8%E0%B5%81%E0%B4%95%E0%B4%B3%E0%B4%BF%E0%B5%BD%20%E0%B4%95%E0%B5%8D%E0%B4%B2%E0%B5%8B%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%8D%20%E0%B4%89%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%A4%E0%B5%8D%20%20%E0%B4%89%E0%B4%A6%E0%B5%8D%E0%B4%AF%E0%B5%8B%E0%B4%97%E0%B4%BE%E0%B5%BC%E0%B4%A5%E0%B4%BF%E0%B4%95%E0%B4%B3%E0%B5%8B%E0%B4%9F%E0%B5%8D%20%E0%B4%95%E0%B4%BE%E0%B4%A3%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%20%E0%B4%B5%E0%B5%87%E0%B5%BC%E0%B4%A4%E0%B4%BF%E0%B4%B0%E0%B4%BF%E0%B4%B5%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B5%87%20%3F.%20%E0%B4%86%E0%B4%AF%E0%B4%A4%E0%B4%BF%E0%B4%A8%E0%B4%BE%E0%B5%BD%20%E0%B4%AA%E0%B4%B0%E0%B5%80%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%BE%20%E0%B4%B9%E0%B4%BE%E0%B4%B3%E0%B4%BF%E0%B5%BD%20%E0%B4%89%E0%B4%A6%E0%B5%8D%E0%B4%AF%E0%B5%8B%E0%B4%97%E0%B4%BE%E0%B5%BC%E0%B4%A4%E0%B5%8D%E0%B4%A5%E0%B4%BF%E0%B4%95%E0%B4%B3%E0%B5%81%E0%B4%9F%E0%B5%86%20%E0%B4%86%E0%B4%B5%E0%B4%B6%E0%B5%8D%E0%B4%AF%E0%B4%BE%E0%B4%A8%E0%B5%81%E0%B4%B8%E0%B4%B0%E0%B4%A3%E0%B4%82%20%E0%B4%B8%E0%B4%AE%E0%B4%AF%E0%B4%82%20%E0%B4%A8%E0%B5%8B%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%B5%E0%B4%BE%E0%B4%A8%E0%B5%81%E0%B4%B3%E0%B5%8D%E0%B4%B3%20%E0%B4%B8%E0%B4%82%E0%B4%B5%E0%B4%BF%E0%B4%A7%E0%B4%BE%E0%B4%A8%E0%B4%82%20%E0%B4%92%E0%B4%B0%E0%B5%81%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%A3%E0%B4%AE%E0%B5%86%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B5%8D%20%E0%B4%B5%E0%B4%BF%E0%B4%A8%E0%B5%80%E0%B4%A4%E0%B4%AE%E0%B4%BE%E0%B4%AF%E0%B4%BF%20%E0%B4%85%E0%B4%AA%E0%B5%87%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B5%81." class="text-white hover:text-gray-400">
-              <svg width="25" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0h20A2.5 2.5 0 0 1 25 2.5v15a2.5 2.5 0 0 1-2.5 2.5h-20A2.5 2.5 0 0 1 0 17.5v-15C0 1.125 1.125 0 2.5 0zm20 4.225V2.5h-20v1.725l10 5 10-5zm0 2.8l-9.438 4.713a1.25 1.25 0 0 1-1.124 0L2.5 7.025V17.5h20V7.025z" fill-rule="nonzero"/></svg>
-            </a>
-
-                    
-                    
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </body>
-
+				modal
+					.querySelector(".modal-background")
+					.addEventListener("click", function (e) {
+						e.preventDefault();
+						modal.classList.remove("is-active");
+						html.classList.remove("is-clipped");
+					});
+			});
+	</script>
 </html>
 
